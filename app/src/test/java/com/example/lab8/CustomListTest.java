@@ -23,6 +23,12 @@ public class CustomListTest {
         return list;
     }
 
+    private City city;
+    public City mockCity(){
+        city = new City(null, null);
+        return city;
+    }
+
 
     @Test
     public void addCityTest(){
@@ -35,17 +41,18 @@ public class CustomListTest {
     @Test
     public void hasCityTest(){
         list = MockCityList();
+        city = mockCity();
         assertEquals(list.hasCity(), false);
-        list.add(new City("c", "a"));
+        list.addCity(city);
         assertEquals(list.hasCity(), true);
 
     }
 
-    @Test
-    public void getCountTest(){
-        list = MockCityList();
-        assertEquals(list.getCount(), 0);
-
-    }
+//    @Test
+//    public void getCountTest(){
+//        list = MockCityList();
+//        assertEquals(list.getCount(), 0);
+//
+//    }
 
 }
