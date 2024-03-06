@@ -35,6 +35,7 @@ public class CustomListTest {
     @Test
     public void hasCityTest(){
         list = MockCityList();
+        assertEquals(list.hasCity(), false);
 
     }
 
